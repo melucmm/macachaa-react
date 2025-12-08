@@ -1,0 +1,36 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;        /* 🔥 ESTO LO CENTRA */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 20px;
+  gap: 40px;
+}
+
+.home-text {
+  flex: 1;
+}
+
+.home-img img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-img img {
+    max-width: 300px;
+  }
+}
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}

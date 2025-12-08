@@ -1,0 +1,29 @@
+:root {
+  --negro: #000;
+  --gris-oscuro: #333;
+  --gris-claro: #8a8a8a;
+  --rosa-pastel: #f7b4c4;
+  --rosa-fuerte: #ff4fa3;
+  --blanco: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--blanco);
+  color: var(--negro);
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;     
+  padding: 80px 20px;
+  text-align: center;
+}

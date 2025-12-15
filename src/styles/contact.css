@@ -1,70 +1,110 @@
+
 .contact-section {
-  padding: 80px 10%;
-  background: #f8f8f8;
+  padding: 40px 20px;
   text-align: center;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-  color: #ff4fa3;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
+/* FORMULARIO */
 .contact-form {
-  max-width: 500px;
-  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0px 5px 20px rgba(14, 4, 4, 0.1);
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 15px;
 }
 
 .contact-form label {
-  text-align: left;
   font-weight: 600;
-  color: #333;
+  text-align: left;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 12px 15px;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 1rem;
-  outline: none;
-  transition: 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #ff4fa3;
-  box-shadow: 0 0 5px rgba(255, 79, 163, 0.3);
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-form textarea {
-  height: 130px;
+  height: 120px;
   resize: none;
 }
 
-.contact-btn {
-  background: #ff4fa3;
+/* BOTONES */
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 25px;
   border: none;
-  padding: 14px;
-  border-radius: 8px;
+  background: #ff4fa3;
   color: white;
-  font-size: 1.1rem;
+  border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
+  font-weight: 600;
+  transition: 0.2s;
 }
 
-.contact-btn:hover {
-  background: #e33c90;
+button:hover {
+  opacity: 0.85;
 }
 
+.reset {
+  background: #777;
+}
 
-@media (max-width: 768px) {
-  .contact-title {
-    font-size: 2rem;
+/* ALERTAS */
+.alert {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+.alert.error {
+  background: #ffcccc;
+  color: #a80000;
+}
+
+.alert.success {
+  background: #ccffe1;
+  color: #008a3e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .contact-form {
+    padding: 20px;
+  }
+
+  .btns {
+    flex-direction: column;
+    gap: 10px;
   }
 }

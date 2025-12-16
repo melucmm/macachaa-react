@@ -7,7 +7,6 @@ function Contacto() {
   const { formData, handleChange, resetForm } = useLocalForm("formContactoDraft", {
     nombre: "",
     apellido: "",
-    whatsapp: "",
     email: "",
   });
 
@@ -24,8 +23,8 @@ function Contacto() {
     }
 
     // Validación
-    if (!formData.nombre || !formData.apellido || !formData.whatsapp || !formData.email) {
-      alert("Complete todos los campos.");
+    if (!formData.nombre || !formData.apellido || !formData.email) {
+      alert("Complete los campos.");
       return;
     }
 
@@ -36,7 +35,7 @@ function Contacto() {
     const actualizado = [...lista, nuevo];
     localStorage.setItem("contactos", JSON.stringify(actualizado));
 
-    alert("Contacto agregado correctamente ✔");
+    alert("Contacto agregado");
 
     resetForm();
   };
@@ -56,7 +55,7 @@ function Contacto() {
               name="nombre"
               value={formData.nombre}
               onChange={handleChange}
-              placeholder="Tu nombre"
+              placeholder="Nombre"
               required
             />
           </div>
@@ -69,23 +68,12 @@ function Contacto() {
               name="apellido"
               value={formData.apellido}
               onChange={handleChange}
-              placeholder="Tu apellido"
+              placeholder="Apellido"
               required
             />
           </div>
 
-          <div className="mb-2">
-            <label>Whatsapp</label>
-            <input
-              type="text"
-              className="form-control form-control-sm"
-              name="whatsapp"
-              value={formData.whatsapp}
-              onChange={handleChange}
-              placeholder="+54261..."
-              required
-            />
-          </div>
+          
 
           <div className="mb-2">
             <label>Email</label>
@@ -95,16 +83,14 @@ function Contacto() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="fridabj@gmail.com"
+              placeholder="email"
               required
             />
           </div>
 
           <div className="mt-3 d-flex justify-content-center gap-2">
             <button type="submit" className="btn btn-success btn-sm">Enviar</button>
-            <button type="button" onClick={resetForm} className="btn btn-danger btn-sm">
-              Reset
-            </button>
+            
           </div>
         </form>
       </div>

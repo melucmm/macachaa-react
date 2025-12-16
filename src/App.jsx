@@ -1,40 +1,50 @@
-import Navbar from "./components/Navbar.jsx";
-import Home from "./components/Home.jsx";
-import Cards from "./components/Cards.jsx";
-import Gallery from "./components/Gallery.jsx";
-import Contact from "./components/Contact.jsx";
-import Footer from "./components/Footer.jsx";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Cards from "./components/Cards";
+import Gallery from "./components/Gallery";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
+  function App() {
   return (
-    <div>
-      <Navbar />
-
-      <section id="home" style={{ background: "#ffdede", padding: "50px" }}>
-        <Home
-          title="Elegí tu estilo"
-          description="Zapatos modernos, cómodos y pensados para acompañarte todos los días."
-          image="/assets/sansalia.png"
-        />
-      </section>
-
-      <section id="cards" style={{ background: "#deffde", padding: "50px" }}>
-        <Cards />
-      </section>
-
-      <section id="gallery" style={{ background: "#dedeff", padding: "50px" }}>
-        <Gallery />
-      </section>
-
-      <section id="contact" style={{ background: "#ffffde", padding: "50px" }}>
-        <Contact />
-      </section>
-
-     <Footer />
-
+    <div style={{ padding: 40, background: "pink" }}>
+      <h1>SI VES ESTO, ERA CSS</h1>
     </div>
   );
 }
 
-export default App;
+  return (
+    <>
+      <Navbar />
 
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Home
+                title="Elegí tu estilo"
+                description="Zapatos modernos, cómodos y pensados para acompañarte todos los días."
+                image="/assets/sansalia.png"
+              />
+              <Cards />
+              <Gallery />
+              <Contact />
+            </>
+          }
+        />
+
+        <Route
+          path="/producto/:nombre"
+          element={<h2 style={{ padding: "40px" }}>Detalle del producto</h2>}
+        />
+      </Routes>
+
+      <Footer />
+    </>
+  );
+}
+
+export default App;

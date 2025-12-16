@@ -1,0 +1,96 @@
+
+.form-card {
+  /* Propiedades de la tarjeta/rectángulo */
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra elegante y notoria */
+  margin: 20px auto; /* Centra horizontalmente si el contenedor padre es ancho */
+  max-width: 400px; /* Ancho máximo para mantenerlo compacto */
+  width: 100%;
+  border: 1px solid #e0e0e0; /* Borde sutil */
+}
+
+/* --- Título del Formulario --- */
+/* Estilo para <center><label> */
+.form-card center label {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e3a8a; /* Azul oscuro para un toque profesional */
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+/* --- Espaciado de Grupo de Campos (Bootstrap mb-2) --- */
+.mb-2 {
+  margin-bottom: 20px !important;
+}
+
+/* --- Etiquetas (Label) --- */
+.mb-2 label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #374151; /* Gris oscuro para fácil lectura */
+  font-size: 0.95rem;
+}
+
+/* --- Estilos de Input (form-control form-control-sm) --- */
+.form-control.form-control-sm {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #f9fafb; /* Fondo ligeramente gris para los inputs */
+  border: 1px solid #d1d5db; /* Borde más claro */
+  border-radius: 8px; /* Bordes más redondeados */
+  transition: all 0.3s ease;
+}
+
+.form-control.form-control-sm:focus {
+  background-color: #ffffff;
+  border-color: #3b82f6; /* Azul brillante al enfocar */
+  box-shadow: 0 0 0 0.15rem rgba(59, 130, 246, 0.4);
+  outline: none;
+}
+
+/* --- Estilos de Botones (mt-3 d-flex justify-content-center gap-2) --- */
+.mt-3.d-flex.justify-content-center.gap-2 {
+  margin-top: 30px !important;
+  gap: 15px;
+}
+
+/* Base para los botones */
+.btn {
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+/* Botón Enviar (btn-success) */
+.btn-success.btn-sm {
+  background-color: #10b981; /* Verde esmeralda moderno */
+  border-color: #10b981;
+}
+
+.btn-success.btn-sm:hover {
+  background-color: #059669;
+  border-color: #059669;
+  transform: translateY(-1px);
+}
+
+/* Botón Reset (btn-danger) */
+.btn-danger.btn-sm {
+  background-color: #ef4444; /* Rojo vibrante */
+  border-color: #ef4444;
+}
+
+.btn-danger.btn-sm:hover {
+  background-color: #dc2626;
+  border-color: #dc2626;
+  transform: translateY(-1px);
+}
